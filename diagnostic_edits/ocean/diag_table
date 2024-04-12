@@ -1,0 +1,166 @@
+mio_v4
+0001 01 01 0 0 0
+## output files
+ "ocean_month",           1,  "months", 1, "days", "time",
+ "ocean_year",            1,  "years" , 1, "days", "time",
+ "ocean_scalar",          1,  "months", 1, "days", "time"
+#
+## output variables
+#
+#==================
+# OCEAN DIAGNOSTICS
+#==================
+#
+## grid quantities
+ "ocean_model","area_t","area_t","ocean_year","all",.false.,"none",2
+ "ocean_model","area_u","area_u","ocean_year","all",.false.,"none",2
+#
+ "ocean_model","dzt","dzt","ocean_year","all",.true.,"none",2
+ "ocean_model","dzu","dzu","ocean_year","all",.true.,"none",2
+#
+ "ocean_model","geolat_c","geolat_c","ocean_year","all",.false.,"none",2
+ "ocean_model","geolon_c","geolon_c","ocean_year","all",.false.,"none",2
+ "ocean_model","geolat_t","geolat_t","ocean_year","all",.false.,"none",2
+ "ocean_model","geolon_t","geolon_t","ocean_year","all",.false.,"none",2
+ "ocean_model","ht","ht","ocean_year","all",.false.,"none",2
+ "ocean_model","hu","hu","ocean_year","all",.false.,"none",2
+#
+## scalars
+"ocean_model","temp_surface_ave","temp_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
+"ocean_model","salt_surface_ave","salt_surface_ave"            ,"ocean_scalar","all",.true.,"none",2
+"ocean_model","temp_global_ave","temp_global_ave" ,"ocean_scalar","all",.true.,"none",2
+"ocean_model","salt_global_ave","salt_global_ave" ,"ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_river","total_ocean_river","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_evap","total_ocean_evap","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_pme_sbc","total_ocean_pme_sbc","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_fprec","total_ocean_fprec","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_lprec","total_ocean_lprec","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_calving","total_ocean_calving","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_runoff","total_ocean_runoff","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_salt","salt_total","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_heat","temp_total","ocean_scalar","all",.true.,"none",2
+"ocean_model","total_ocean_hflux_pme","total_ocean_hflux_pme","ocean_scalar","all",.true.,"none",2
+"ocean_model","ke_tot","ke_tot","ocean_scalar","all",.true.,"none",2
+"ocean_model","pe_tot","pe_tot","ocean_scalar","all",.true.,"none",2
+"ocean_model","eta_global","eta_global" ,"ocean_scalar","all",.true.,"none",2
+"ocean_model","eta_adjust","eta_adjust" ,"ocean_scalar","all",.true.,"none",2
+#
+# surface height related fields
+ "ocean_model","eta_t","eta_t","ocean_year","all",.true.,"none",2
+ "ocean_model","eta_u","eta_u","ocean_year","all",.true.,"none",2
+ "ocean_model","urhod","urhod","ocean_year","all",.true.,"none",2
+ "ocean_model","vrhod","vrhod","ocean_year","all",.true.,"none",2
+ "ocean_model","age_global","age_global","ocean_year","all",.true.,"none",2
+ "ocean_model","salt","salt","ocean_year","all",.true.,"none",2
+ "ocean_model","temp","temp","ocean_year","all",.true.,"none",2
+ "ocean_model","u","u","ocean_year","all",.true.,"none",2
+ "ocean_model","v","v","ocean_year","all",.true.,"none",2
+#
+# 2D surface and fields monthly output
+ "ocean_model","surface_temp","sst","ocean_month","all",.true.,"none",2
+ "ocean_model","surface_salt","sss","ocean_month","all",.true.,"none",2
+ "ocean_model","usurf","u_surf","ocean_month","all",.true.,"none",2
+ "ocean_model","vsurf","v_surf","ocean_month","all",.true.,"none",2
+ "ocean_model","mld","mld","ocean_month","all",.true.,"none",2
+ "ocean_model","tau_x","tau_x","ocean_month","all",.true.,"none",2
+ "ocean_model","tau_y","tau_y","ocean_month","all",.true.,"none",2
+
+# 2D surface and fields annual output - generally we want both
+ "ocean_model","surface_temp","sst","ocean_year","all",.true.,"none",2
+ "ocean_model","surface_salt","sss","ocean_year","all",.true.,"none",2
+ "ocean_model","mld","mld","ocean_year","all",.true.,"none",2
+
+# 2D bottom fields - annual only
+ "ocean_model","ubott","u_bott","ocean_year","all",.true.,"none",2
+ "ocean_model","vbott","v_bott","ocean_year","all",.true.,"none",2
+ "ocean_model","bottom_temp","bottom_temp","ocean_year","all",.true.,"none",2
+ "ocean_model","bottom_salt","bottom_salt","ocean_year","all",.true.,"none",2
+ "ocean_model","bottom_age_global","bottom_age_global","ocean_year","all",.true.,"none",2
+
+#
+## diagnostic fields
+ "ocean_model","neutral_rho","neutral_rho","ocean_year","all",.true.,"none",2
+ "ocean_model","potrho_mix_base","potrho_mix_base","ocean_year","all",.true.,"none",2
+ "ocean_model","rho","rho","ocean_year","all",.true.,"none",2
+ "ocean_model","wt","wt","ocean_year","all",.true.,"none",2
+#
+## vertically-integrated fluxes
+ "ocean_model","salt_xflux_adv_int_z","salt_xflux_adv_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","salt_yflux_adv_int_z","salt_yflux_adv_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","salt_xflux_neutral_int_z","salt_xflux_neutral_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","salt_yflux_neutral_int_z","salt_yflux_neutral_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","temp_xflux_adv_int_z","temp_xflux_adv_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","temp_yflux_adv_int_z","temp_yflux_adv_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","temp_xflux_neutral_int_z","temp_xflux_neutral_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","temp_yflux_neutral_int_z","temp_yflux_neutral_int_z","ocean_year","all",.true.,"none",2
+ "ocean_model","temp_sigma_diff_xflux_int_z","temp_xflux_sigma","ocean_year","all",.true.,"none",2
+ "ocean_model","temp_sigma_diff_yflux_int_z","temp_yflux_sigma","ocean_year","all",.true.,"none",2
+#
+## surface flux quantities
+ "ocean_model","frazil_2d","frazil_2d","ocean_year","all",.true.,"none",2
+ "ocean_model","pme_sbc","pme_mass","ocean_year","all",.true.,"none",2
+ "ocean_model","pme_velocity","pme","ocean_year","all",.true.,"none",2
+ "ocean_model","runoff","runoff","ocean_year","all",.true.,"none",2
+ "ocean_model","evap","evap","ocean_year","all",.true.,"none",2
+ "ocean_model","fprec","fprec","ocean_year","all",.true.,"none",2
+ "ocean_model","lprec","lprec","ocean_year","all",.true.,"none",2
+ "ocean_model","swflx","swflx","ocean_year","all",.true.,"none",2
+ "ocean_model","evap_heat","evap_heat","ocean_year","all",.true.,"none",2
+ "ocean_model","lw_heat","lw_heat","ocean_year","all",.true.,"none",2
+ "ocean_model","sens_heat","sens_heat","ocean_year","all",.true.,"none",2
+ "ocean_model","sfc_hflux_pme","sfc_hflux_pme","ocean_year","all",.true.,"none",2
+ "ocean_model","tau_x","tau_x","ocean_year","all",.true.,"none",2
+ "ocean_model","tau_y","tau_y","ocean_year","all",.true.,"none",2
+ "ocean_model","tau_curl","tau_curl","ocean_year","all",.true.,"none",2
+ "ocean_model","ekman_we","ekman_we","ocean_year","all",.true.,"none",2
+#
+## mass transport
+ "ocean_model","tx_trans","tx_trans","ocean_year","all",.true.,"none",2
+ "ocean_model","ty_trans","ty_trans","ocean_year","all",.true.,"none",2
+ "ocean_model","tx_trans_gm","tx_trans_gm","ocean_year","all",.true.,"none",2
+ "ocean_model","ty_trans_gm","ty_trans_gm","ocean_year","all",.true.,"none",2
+ "ocean_model","tx_trans_rho","tx_trans_rho","ocean_year","all",.true.,"none",2
+ "ocean_model","ty_trans_rho","ty_trans_rho","ocean_year","all",.true.,"none",2
+ "ocean_model","tx_trans_rho_gm","tx_trans_rho_gm","ocean_year","all",.true.,"none",2
+ "ocean_model","ty_trans_rho_gm","ty_trans_rho_gm","ocean_year","all",.true.,"none",2
+#
+## mass transport quasi-streamfunction
+ "ocean_model","psiu","psiu","ocean_year","all",.true.,"none",2
+ "ocean_model","psiv","psiv","ocean_year","all",.true.,"none",2
+## physical parameterizations
+ "ocean_model","bmf_u","bmf_u","ocean_year","all",.true.,"none",2
+ "ocean_model","bmf_v","bmf_v","ocean_year","all",.true.,"none",2
+#=============================================================================================
+#
+#==== This file can be used with diag_manager/v2.0a (or higher) ====
+#
+#
+#  FORMATS FOR FILE ENTRIES (not all input values are used)
+#  ------------------------
+#
+#"file_name", output_freq, "output_units", format, "time_units", "long_name",
+#
+#
+#output_freq:  > 0  output frequency in "output_units"
+#              = 0  output frequency every time step
+#              =-1  output frequency at end of run
+#
+#output_units = units used for output frequency
+#               (years, months, days, minutes, hours, seconds)
+#
+#time_units   = units used to label the time axis
+#               (days, minutes, hours, seconds)
+#
+#
+#  FORMAT FOR FIELD ENTRIES (not all input values are used)
+#  ------------------------
+#
+#"module_name", "field_name", "output_name", "file_name" "time_sampling", time_avg, "other_opts", packing
+#
+#time_avg = .true. or .false.
+#
+#packing  = 1  double precision
+#         = 2  float
+#         = 4  packed 16-bit integers
+#         = 8  packed 1-byte (not tested?)
+#=============================================================================================
